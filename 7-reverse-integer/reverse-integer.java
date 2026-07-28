@@ -1,14 +1,14 @@
 class Solution {
     public int reverse(int x) {
-        long ans = 0;
+        long sum = 0;
         
         while(x != 0) {
-            ans = ans * 10 + (x % 10);
+            sum = sum * 10 + (x % 10);
             x /= 10;
         }
-        if(ans > Integer.MAX_VALUE || ans < Integer.MIN_VALUE) {
+        if(sum > Integer.MAX_VALUE || sum < Integer.MIN_VALUE) {
             return 0;
         }
-        return (int)ans;
+        return (int)sum;
     }
 }
